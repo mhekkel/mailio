@@ -22,10 +22,11 @@ copy at http://www.freebsd.org/copyright/freebsd-license.html.
 #include <ostream>
 #include <sstream>
 #include <fstream>
+#include <regex>
+
 #include <boost/algorithm/string/trim.hpp>
 #include <boost/algorithm/string/predicate.hpp>
 #include <boost/algorithm/string/split.hpp>
-#include <boost/regex.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <mailio/codec.hpp>
 #include <mailio/base64.hpp>
@@ -52,16 +53,16 @@ using std::shared_ptr;
 using std::make_shared;
 using std::tuple;
 using std::size_t;
+using std::regex;
+using std::regex_match;
+using std::smatch;
+using std::sregex_iterator;
 using boost::trim_copy;
 using boost::trim;
 using boost::trim_left_if;
 using boost::trim_right_if;
 using boost::iequals;
 using boost::split;
-using boost::regex;
-using boost::regex_match;
-using boost::smatch;
-using boost::sregex_iterator;
 using boost::algorithm::is_any_of;
 using boost::local_time::local_date_time;
 using boost::local_time::local_time_input_facet;

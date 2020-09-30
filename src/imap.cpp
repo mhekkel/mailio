@@ -17,13 +17,14 @@ copy at http://www.freebsd.org/copyright/freebsd-license.html.
 #include <sstream>
 #include <string>
 #include <tuple>
+#include <regex>
+
 #include <boost/algorithm/string.hpp>
 #include <boost/algorithm/string/compare.hpp>
 #include <boost/algorithm/string/join.hpp>
 #include <boost/algorithm/string/predicate.hpp>
 #include <boost/algorithm/string/trim.hpp>
 #include <boost/range/adaptor/transformed.hpp>
-#include <boost/regex.hpp>
 #include <mailio/imap.hpp>
 
 
@@ -45,11 +46,11 @@ using std::to_string;
 using std::tuple;
 using std::vector;
 using std::chrono::milliseconds;
+using std::regex;
+using std::regex_match;
+using std::smatch;
 using boost::system::system_error;
 using boost::iequals;
-using boost::regex;
-using boost::regex_match;
-using boost::smatch;
 using boost::split;
 using boost::trim;
 using boost::algorithm::trim_copy_if;
